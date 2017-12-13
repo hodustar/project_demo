@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mypage_user">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text ="userID"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                style="@style/btnStylesorbus"
+                android:text="Modify" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/mypage_lv"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="26dp"></ListView>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/my_btm_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:menu="@menu/bottom_navigation_main">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/mypage_upload_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/my_btm_nav"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="13dp"
+                android:clickable="true"
+                app:backgroundTint="@android:color/white"
+                app:srcCompat="@mipmap/ic_add_white_24dp"
+                tools:backgroundTint="@android:color/background_dark" />
+        </android.support.design.widget.BottomNavigationView>
+
+    </RelativeLayout>
+</LinearLayout>
